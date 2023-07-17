@@ -1,0 +1,69 @@
+<!-- Created by Felipe Luna  Jul 2023 -->
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/estilos.css">
+        <link rel="icon" type="image/x-icon" href="/img/logo.png">
+        <title>API NASA</title>
+    </head>
+    
+    <body>
+        <!-- BARRA DE NAVEGACIÓN -->
+        <div id="nav-placeholder"></div>
+
+        <div class="apod_desc">
+            <h1>APOD</h1>
+            <p>One of the most popular websites at NASA is the Astronomy Picture of the Day. In fact, this website is one of the most popular websites across all federal agencies. It has the popular appeal of a Justin Bieber video. This endpoint structures the APOD imagery and associated metadata so that it can be repurposed for other applications. In addition, if the concept_tags parameter is set to True, then keywords derived from the image explanation are returned. These keywords could be used as auto-generated hashtags for twitter or instagram feeds; but generally help with discoverability of relevant imagery.</p>
+        </div>
+
+        <div id="carouselExampleIndicators" class="carousel slide apod">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" onclick="llamaApiApod()""></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" onclick="llamaApiApod()"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="d-flex justify-content-center">
+                    <img class="d-block w-100 carousel-image"  src="/img/SpottedSun_Sanli_960.jpg" alt="img.png" id="carousel1">
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="d-flex justify-content-center">
+                    <img class="d-block w-100 carousel-image"  src="/img/SpottedSun_Sanli_960.jpg" alt="img.png" id="carousel2">
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev" onclick="llamaApiApod()">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next" onclick="llamaApiApod()">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <div class="descripcion_apod">
+            <p id="descripcion_apod_title"><b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto at quidem illo beatae delectus ullam, eaque libero consequuntur vitae quia dolorem, distinctio inventore nam eum dolore minima. Qui, temporibus sit?</b></p>
+            <p id="descripcion_apod_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere pariatur doloribus expedita laudantium eveniet architecto aperiam, ipsam reprehenderit, eius perferendis quis consequatur, a omnis distinctio repellendus. Quasi reprehenderit voluptates sit.</p>
+        </div>
+
+
+    </body>
+
+    <footer class="footer">
+      <p>2023 dev.f ❤️</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $(function(){
+          $("#nav-placeholder").load("/menu/navbar.html");
+        });
+    </script>
+    <script src="/index.js"></script>
+</html>

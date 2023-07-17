@@ -1,0 +1,41 @@
+<!-- BARRA DE NAVEGACIÓN -->
+<nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+  <div class="container-fluid">
+    <!-- LOGO NASA -->
+    <a class="navbar-brand" href="/index.html">
+      <img src="/img/logo.png" alt="Bootstrap" width="70" height="58">
+    </a>
+    
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <!-- APOD -->
+          <li class="nav-item">
+            <a class="nav-link active" href="/index.html">APOD</a>
+          </li>
+          
+          <!-- EPIC -->
+          <li class="nav-item">
+            <a class="nav-link active" href="/menu/epic.html">EPIC</a>
+          </li>
+          
+          <!-- MENU ROVER -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              ROVER
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/menu/fhaz.html">FHAZ</a></li>
+              <li><a class="dropdown-item" href="#">MARDI</a></li>
+              <li><a class="dropdown-item" href="#">NAVCAM</a></li>
+            </ul>
+          </li>
+        </ul>
+        
+        <!-- BARRA DE BÚSQUEDA -->
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+</nav>
